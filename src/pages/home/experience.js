@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Timeline, { Event } from "../../components/timeline";
-import career from "../../data/career.json";
-import education from "../../data/education.json";
+import React from 'react';
+import styled from 'styled-components';
+import Timeline, { Event } from '../../components/timeline';
+import career from '../../../data/career.json';
+import education from '../../../data/education.json';
 
 export default class Experience extends React.Component {
   render() {
