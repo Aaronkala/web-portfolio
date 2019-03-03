@@ -1,9 +1,9 @@
-import { injectGlobal } from "styled-components";
-import theme from "./theme";
+import { createGlobalStyle } from 'styled-components';
+import theme from './theme';
 
 /* eslint-disable */
 
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
   /* CSS RESET */
   html, body, div, span, applet, object, iframe,
@@ -96,3 +96,5 @@ injectGlobal`
   }
   small, .font_small {font-size: 0.707em;}
 `;
+
+export default GlobalStyles;

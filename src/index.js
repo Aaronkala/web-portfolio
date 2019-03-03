@@ -1,19 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { ThemeProvider } from "styled-components";
-import { Router, Route, Switch } from "react-router-dom";
-import createBrowserHistory from "history/createBrowserHistory";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
+import { Router, Route, Switch } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 
-import Home from "./pages/home";
-import Portfolio from "./pages/portfolio";
-import theme from "./styles/theme";
-import "./styles/globalStyles";
+import Home from './pages/home';
+import Portfolio from './pages/portfolio';
+import theme from './styles/theme';
+import GlobalStyles from './styles/globalStyles';
 
 const history = createBrowserHistory();
 
 function App() {
   return (
     <div className="App">
+      <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Router history={history}>
           <Switch>
@@ -27,5 +28,5 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
