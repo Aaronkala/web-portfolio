@@ -1,0 +1,82 @@
+[
+  {
+    "type": "Programming",
+    "name": "Javascript",
+    "id": "javascript"
+  },
+  {
+    "type": "Programming",
+    "name": "ReactJS",
+    "id": "reactjs"
+  },
+  {
+    "type": "Programming",
+    "name": "Git",
+    "id": "git"
+  },
+  {
+    "type": "Programming",
+    "name": "NodeJS",
+    "id": "nodejs"
+  },
+  {
+    "type": "Programming",
+    "name": "GraphQL",
+    "id": "graphql"
+  },
+  {
+    "type": "Programming",
+    "name": "Webpack",
+    "id": "webpack"
+  },
+  {
+    "type": "Programming",
+    "name": "MobX",
+    "id": "mobx"
+  },
+  {
+    "type": "Programming",
+    "name": "Docker",
+    "id": "docker"
+  },
+  {
+    "type": "Programming",
+    "name": "SASS",
+    "id": "sass"
+  },
+  {
+    "type": "Programming",
+    "name": "Styled-components",
+    "id": "styled-components"
+  },
+  {
+    "type": "Design",
+    "name": "UX Design",
+    "id": "ux-design"
+  },
+  {
+    "type": "Design",
+    "name": "Photoshop",
+    "id": "photoshop"
+  },
+  {
+    "type": "Design",
+    "name": "Illustrator",
+    "id": "illustrator"
+  },
+  {
+    "type": "Design",
+    "name": "InVision Studio",
+    "id": "invision-studio"
+  },
+  {
+    "type": "Design",
+    "name": "Usability",
+    "id": "usability"
+  },
+  {
+    "type": "Design",
+    "name": "Accessibility",
+    "id": "accessibility"
+  }
+]

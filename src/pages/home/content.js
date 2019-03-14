@@ -5,24 +5,31 @@ import Skills from './skills';
 import Contact from '../../components/contact';
 import Intro from './intro';
 import Experience from './experience';
-import { Scroller } from '../../components/elements';
+import { Scroller, Container } from '../../components/elements';
 
 export default class Content extends React.Component {
   render() {
     return (
       <Container>
         <Scroller>
-          <Intro />
-          <Skills />
-          <Experience />
-          <Contact />
+          <Paddington>
+            <Intro />
+            <Skills />
+            <Experience />
+            <Contact />
+          </Paddington>
         </Scroller>
       </Container>
     );
   }
 }
 
-const Container = styled.div`
-  box-sizing: border-box;
-  height: 50%;
+const Paddington = styled.div`
+  padding: 2em 1em;
+  @media screen and (min-width: ${p => p.theme.breakpoints.sm}) {
+    padding: 2em 2em;
+  }
+  @media screen and (min-width: ${p => p.theme.breakpoints.md}) {
+    padding: 2em 3em;
+  }
 `;

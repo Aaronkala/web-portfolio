@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import Timeline, { Event } from '../../components/timeline';
-import career from '../../../data/career.json';
-import education from '../../../data/education.json';
+import career from '../../static/data/career.json';
+import education from '../../static/data/education.json';
 
 export default class Experience extends React.Component {
   render() {
     return (
       <div>
-        {console.log(career.map(job => job))}
         <h2>Career</h2>
         <Timeline>
           {career.map(job => (
             <Event dateStart={job.date.start} dateEnd={job.date.end}>
               <Title>
-                {job.title} // {job.position}
+                {job.title}
+                {' // '}
+                {job.position}
               </Title>
               <p>{job.description}</p>
             </Event>

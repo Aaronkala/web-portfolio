@@ -1,13 +1,18 @@
 import React from 'react';
-import Contact from '../../components/contact';
-import Projects from './projects';
 
-const Content = () => {
+import Contact from '../../components/contact';
+import { Container, Scroller, Hr } from '../../components/elements';
+import Projects from './projects/index.js';
+
+const Content = ({ filter }) => {
   return (
-    <div>
-      <Projects />
-      <Contact />
-    </div>
+    <Container>
+      <Scroller>
+        <Projects filter={filter} />
+        <Hr />
+        <Contact />
+      </Scroller>
+    </Container>
   );
 };
 

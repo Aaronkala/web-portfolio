@@ -1,61 +1,37 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+
+import { MainContainer } from './components/elements';
 
 export default class Layout extends React.Component {
   render() {
     return (
       <Container>
-        {/* <TopGradient /> */}
-        <CardLeft>{this.props.left}</CardLeft>
-        <CardRight>{this.props.right}</CardRight>
-        {/* <BottomGradient /> */}
+        {this.props.children ? (
+          <CardFull>{this.props.children}</CardFull>
+        ) : (
+          <React.Fragment>
+            <CardLeft>{this.props.left}</CardLeft>
+            <CardRight>{this.props.right}</CardRight>
+          </React.Fragment>
+        )}
       </Container>
     );
   }
 }
 
 const Container = styled.div`
-  @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono");
+  @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
   margin: 0 auto;
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
   align-items: center;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   @media (max-width: 1200px) {
     max-width: 800px;
     display: block;
-  }
-`;
-
-const BottomGradient = styled.div`
-  height: 25%;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  background: linear-gradient(
-    transparent,
-    rgba(255, 255, 255, 0.5) 30%,
-    white 90%
-  );
-  @media (max-width: 1200px) {
-    display: none;
-  }
-`;
-
-const TopGradient = styled.div`
-  height: 25%;
-  width: 100%;
-  position: fixed;
-  background: linear-gradient(
-    white 10%,
-    rgba(255, 255, 255, 0.5) 70%,
-    transparent
-  );
-  top: 0;
-  @media (max-width: 1200px) {
-    display: none;
   }
 `;
 
@@ -85,4 +61,10 @@ const CardRight = styled.div`
     height: auto;
     width: 100%;
   }
+`;
+
+const CardFull = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
 `;

@@ -1,0 +1,153 @@
+[
+  {
+    "title": "Etsin - research dataset finder",
+    "description": "Responsible for building the front-end for the application.",
+    "role": "Front-end developer",
+    "type": "professional",
+    "skills": [
+      { "id": "ansible", "name": "Ansible" },
+      { "id": "axios", "name": "axios" },
+      { "id": "babel", "name": "Babel" },
+      { "id": "bootstrap", "name": "Bootstrap" },
+      { "id": "elasticsearch", "name": "Elasticsearch" },
+      { "id": "git", "name": "Git" },
+      { "id": "javascript", "name": "JavaScript" },
+      { "id": "mobx", "name": "MobX" },
+      { "id": "nginx", "name": "Nginx" },
+      { "id": "npm", "name": "npm" },
+      { "id": "python", "name": "Python" },
+      { "id": "react", "name": "React" },
+      { "id": "react-router", "name": "React Router" },
+      { "id": "saavutettavuus", "name": "Saavutettavuus" },
+      { "id": "sass", "name": "Sass" },
+      { "id": "scrum", "name": "Scrum" },
+      { "id": "styled-components", "name": "Styled Components" },
+      { "id": "ui-design", "name": "UI Design" },
+      { "id": "vagrant", "name": "Vagrant" },
+      { "id": "webpack", "name": "Webpack" },
+      { "id": "yarn", "name": "yarn" }
+    ],
+    "date": {
+      "start": "02.10.2017",
+      "end": "30.11.2018"
+    }
+  },
+  {
+    "title": "Kemira.com",
+    "description": "Kemira.com nettisivuun liittyvät ylläpitotehtävät mm. uudet ominaisuudet ja ongelmatilanteiden korjaaminen. Frontend ja backend työtä, Reactista NodeJS:ään ja Azureen asti.",
+    "role": "Fullstack developer",
+    "type": "professional",
+    "skills": [
+      { "id": "apollo-graphql", "name": "Apollo GraphQL" },
+      { "id": "artifactory", "name": "Artifactory" },
+      { "id": "azure", "name": "Azure" },
+      { "id": "azure-app service", "name": "Azure App Service" },
+      { "id": "docker", "name": "Docker" },
+      { "id": "docker-compose", "name": "Docker Compose" },
+      { "id": "express", "name": "Express" },
+      { "id": "git", "name": "Git" },
+      { "id": "github", "name": "GitHub" },
+      { "id": "graphql", "name": "GraphQL" },
+      { "id": "javascript", "name": "JavaScript" },
+      { "id": "jenkins", "name": "Jenkins" },
+      { "id": "mariadb", "name": "MariaDB" },
+      { "id": "mysql", "name": "MySQL" },
+      { "id": "node.js", "name": "Node.js" },
+      { "id": "react", "name": "React" },
+      { "id": "styled-components", "name": "Styled Components" },
+      { "id": "ui-design", "name": "UI Design" },
+      { "id": "wordpress", "name": "WordPress" }
+    ],
+    "date": {
+      "start": "01.12.2018",
+      "end": ""
+    }
+  },
+  {
+    "title": "Avoindata.fi",
+    "role": "Fullstack developer",
+    "type": "professional",
+    "skills": [
+      { "id": "agile-methodology", "name": "Agile Methodology" },
+      { "id": "apache", "name": "Apache" },
+      { "id": "apache-http server", "name": "Apache HTTP Server" },
+      { "id": "bootstrap", "name": "Bootstrap" },
+      { "id": "ckan", "name": "CKAN" },
+      { "id": "css", "name": "CSS" },
+      { "id": "css3", "name": "CSS3" },
+      { "id": "drupal", "name": "Drupal" },
+      { "id": "drupal-8", "name": "Drupal 8" },
+      { "id": "finnish", "name": "Finnish" },
+      { "id": "git", "name": "Git" },
+      { "id": "github", "name": "GitHub" },
+      { "id": "google-analytics", "name": "Google Analytics" },
+      { "id": "gulp", "name": "Gulp" },
+      { "id": "html", "name": "HTML" },
+      { "id": "html5", "name": "HTML5" },
+      { "id": "javascript", "name": "JavaScript" },
+      { "id": "jira", "name": "JIRA" },
+      { "id": "kanban", "name": "Kanban" },
+      { "id": "less", "name": "LESS" },
+      { "id": "linux", "name": "Linux" },
+      { "id": "open-data", "name": "Open data" },
+      { "id": "php", "name": "PHP" },
+      { "id": "pylons", "name": "Pylons" },
+      { "id": "python", "name": "Python" },
+      { "id": "scrum", "name": "Scrum" },
+      { "id": "solr", "name": "Solr" },
+      { "id": "sqlalchemy", "name": "SQLalchemy" },
+      { "id": "transifex", "name": "Transifex" },
+      { "id": "ui-design", "name": "UI Design" },
+      { "id": "usability-evaluation", "name": "Usability evaluation" },
+      { "id": "vagrant", "name": "Vagrant" },
+      { "id": "virtualbox", "name": "VirtualBox" },
+      { "id": "yaml", "name": "YAML" }
+    ],
+    "date": {
+      "start": "12.02.2019",
+      "end": ""
+    }
+  },
+  {
+    "title": "Gofore.com",
+    "role": "Software engineer",
+    "description": "Rebuilding the Gofore website. Implementing new designs and frontend with some backend things related to Wordpress. Later on also in charge of coordinating the developer team.",
+    "type": "professional",
+    "skills": [
+      { "id": "css", "name": "CSS" },
+      { "id": "css3", "name": "CSS3" },
+      { "id": "git", "name": "Git" },
+      { "id": "github", "name": "GitHub" },
+      { "id": "gulp", "name": "Gulp" },
+      { "id": "html5", "name": "HTML5" },
+      { "id": "javascript", "name": "JavaScript" },
+      { "id": "nginx", "name": "Nginx" },
+      { "id": "php", "name": "PHP" },
+      { "id": "sass", "name": "Sass" },
+      { "id": "scrum", "name": "Scrum" },
+      { "id": "trello", "name": "Trello" },
+      { "id": "vagrant", "name": "Vagrant" },
+      { "id": "wordpress", "name": "WordPress" }
+    ],
+    "date": {
+      "start": "01.06.2017",
+      "end": "30.11.2018"
+    }
+  },
+  {
+    "title": "Qvain",
+    "role": "Software engineer",
+    "description": "Tiedostojen ja kansoiden metadatan syöttö työkalun suunnittelu ja toteutus.",
+    "type": "professional",
+    "skills": [
+      { "id": "html5", "name": "HTML5" },
+      { "id": "javascript", "name": "JavaScript" },
+      { "id": "sass", "name": "Sass" },
+      { "id": "vue.js", "name": "Vue.js" }
+    ],
+    "date": {
+      "start": "07.08.2018",
+      "end": "31.08.2018"
+    }
+  }
+]
