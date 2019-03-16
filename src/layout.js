@@ -54,6 +54,7 @@ const CardRight = styled.div`
   overflow-y: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }

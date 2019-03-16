@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SkillBlock from '../../../components/skill-block';
 import projectData from '../../../static/data/projects.json';
+import ProjectListItem from './projectListItem';
 
 const ProjectList = ({ filter }) => {
   const filterProjects = (data, fil) => {
@@ -22,17 +22,7 @@ const ProjectList = ({ filter }) => {
   return (
     <Grid>
       {filterProjects(projectData, filter).map(project => (
-        <ProjectItem key={project.title}>
-          <h2>{project.title}</h2>
-          <p>{project.description}</p>
-          <div>
-            {project.skills.slice(0, 7).map(skill => (
-              <SkillBlock skill={skill.name} key={skill.id}>
-                {skill.name}
-              </SkillBlock>
-            ))}
-          </div>
-        </ProjectItem>
+        <ProjectListItem key={project.title} project={project} />
       ))}
     </Grid>
   );
@@ -44,10 +34,6 @@ const Grid = styled.div`
   width: 100%;
   grid-column-gap: 20px;
   grid-row-gap: 50px;
-`;
-
-const ProjectItem = styled.section`
-  display: block;
 `;
 
 export default ProjectList;

@@ -11,6 +11,7 @@ const Projects = ({ filter }) => {
       <Title>Projects</Title>
       <Hr />
       <Filter filter={filter} />
+      <Hr long />
       <ProjectList filter={filter} />
     </Spacer>
   );
