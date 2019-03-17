@@ -19,11 +19,18 @@ const ProjectList = ({ filter }) => {
     }
     return data;
   };
+
+  const filteredProjects = filterProjects(projectData, filter);
+
   return (
     <Grid>
-      {filterProjects(projectData, filter).map(project => (
-        <ProjectListItem key={project.title} project={project} />
-      ))}
+      {filteredProjects.length > 0 ? (
+        filteredProjects.map(project => (
+          <ProjectListItem key={project.title} project={project} />
+        ))
+      ) : (
+        <p>No projects found with filter: {filter}</p>
+      )}
     </Grid>
   );
 };

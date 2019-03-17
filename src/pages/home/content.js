@@ -32,4 +32,7 @@ const Paddington = styled.div`
   @media screen and (min-width: ${p => p.theme.breakpoints.md}) {
     padding: 2em 3em;
   }
+  & > *:not(:last-child) {
+    margin-bottom: 6em;
+  }
 `;

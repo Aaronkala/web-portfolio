@@ -37,7 +37,7 @@ export default class Experience extends React.Component {
 }
 
 const Title = styled.h3`
-  margin: 0;
+  margin: 0 0 0.5em 0;
 `;
 
 const SubTitle = styled.h4`

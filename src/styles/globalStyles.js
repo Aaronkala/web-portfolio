@@ -68,27 +68,27 @@ const GlobalStyles = createGlobalStyle`
   p {
     font-size: 0.9em;
     line-height: 1.9em;
-    margin: 1em 0em;
+    margin: 0 0 1.2em 0;
   }
   h1, h2, h3, h4 {
-    margin: 1.414em 0 0.5em;
+    margin: 0 0 0.5em 0;
     font-weight: inherit;
     line-height: 1;
   }
   h1 {
-    margin-top: 0;
+    margin: 0 0 0.5em 0;
     font-size: 2em;
     font-weight: 700;
   }
   h2 {
     font-size: 1.5em;
     font-weight: 700;
-    margin: 0.83em 0em;
+    margin: 0 0 1em 0em;
   }
   h3 {
     font-size: 1.17em;
     font-weight: 700;
-    margin: 1em 0em;
+    margin: 0 0 1.5em 0em;
   }
   h4 {
     font-size: 1.05em;

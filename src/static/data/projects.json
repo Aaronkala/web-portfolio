@@ -127,7 +127,8 @@
       { "id": "scrum", "name": "Scrum" },
       { "id": "trello", "name": "Trello" },
       { "id": "vagrant", "name": "Vagrant" },
-      { "id": "wordpress", "name": "WordPress" }
+      { "id": "wordpress", "name": "WordPress" },
+      { "id": "mysql", "name": "MySQL" }
     ],
     "date": {
       "start": "01.06.2017",

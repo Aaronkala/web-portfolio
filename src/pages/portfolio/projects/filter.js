@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
-import { Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { withTheme } from 'styled-components';
 
 import projectData from '../../../static/data/projects.json';
@@ -74,31 +74,31 @@ const GetSkills = () => {
   return s.filter(onlyUnique);
 };
 
-const Filter = ({ filter = '', theme }) => {
-  const [selected, setSelected] = useState(filter);
+const Filter = ({ filter = '', theme, history }) => {
   const [skills] = useState(GetSkills());
 
   const activeFilter = skills.find(value => value.id === filter);
 
-  // TODO: this doesn't work with clicking skills in projects
-  if (selected !== filter) {
-    return <Redirect to={`/portfolio/${selected}`} />;
-  }
+  const reRoute = newRoute => {
+    history.push(`/portfolio/${newRoute}`);
+  };
 
   return (
     <Select
       placeholder="Filter by skill..."
       styles={customStyles(theme)}
       value={
-        filter ? { value: activeFilter.id, label: activeFilter.name } : null
+        activeFilter
+          ? { value: activeFilter.id, label: activeFilter.name }
+          : null
       }
       isClearable="True"
       onChange={(item, action) => {
         if (action.action === 'select-option') {
-          setSelected(item.value);
+          reRoute(item.value);
         }
         if (action.action === 'clear') {
-          setSelected('');
+          reRoute('');
         }
       }}
       options={skills.map(skill => ({
@@ -109,4 +109,4 @@ const Filter = ({ filter = '', theme }) => {
   );
 };
 
-export default withTheme(Filter);
+export default withRouter(withTheme(Filter));
