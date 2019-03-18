@@ -37,10 +37,13 @@ const ProjectList = ({ filter }) => {
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   width: 100%;
   grid-column-gap: 20px;
   grid-row-gap: 50px;
+  @media (min-width: ${p => p.theme.breakpoints.lg}) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export default ProjectList;

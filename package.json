@@ -2,6 +2,7 @@
   "name": "web-portfolio-frontend",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://aaronhakala.com",
   "keywords": [],
   "main": "src/frontend/index.js",
   "dependencies": {
@@ -15,12 +16,13 @@
     "react-select": "^2.4.2",
     "styled-components": "^4.1.3"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "firebase deploy"
   },
   "browserslist": [
     ">0.2%",
