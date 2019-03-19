@@ -34,17 +34,9 @@ export const Scroller = styled.div`
   }
 `;
 
-export const Picture = styled.div`
-  background-image: url("${p => p.src}");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  max-width: 400px;
-  @media (max-width: 1200px) {
-    height: 400px;
-    max-width: 300px;
-    background-position: 50% 30%;
-  }
+export const Picture = styled.img`
+  max-height: 100%;
+  max-width: 300px;
 `;
 
 const BaseButton = styled.button`

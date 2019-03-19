@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navigation from '../../components/navigation';
 import { Picture } from '../../components/elements';
-import me from '../../static/aaron.jpg';
+import me from '../../static/aaron-crop.jpg';
 
 const Sidebar = () => {
   return (

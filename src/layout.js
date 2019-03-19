@@ -36,13 +36,14 @@ const Container = styled.div`
 `;
 
 const CardLeft = styled.div`
-  height: 50%;
   width: 30%;
+  max-height: 70%;
   display: flex;
   justify-content: center;
+  overflow: initial;
   @media (max-width: 1200px) {
+    overflow: hidden;
     width: 100%;
-    height: 44%;
     margin-top: 5em;
   }
 `;
