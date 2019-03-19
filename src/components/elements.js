@@ -35,7 +35,7 @@ export const Scroller = styled.div`
 `;
 
 export const Picture = styled.img`
-  max-height: 100%;
+  object-fit: contain;
   max-width: 300px;
 `;
 
