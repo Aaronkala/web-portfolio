@@ -37,7 +37,7 @@ const Container = styled.div`
 
 const CardLeft = styled.div`
   width: 30%;
-  max-height: 70%;
+  max-height: 50%;
   display: flex;
   justify-content: center;
   overflow: initial;

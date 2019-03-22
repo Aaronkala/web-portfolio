@@ -6,8 +6,8 @@
   },
   {
     "type": "Programming",
-    "name": "ReactJS",
-    "id": "reactjs"
+    "name": "React",
+    "id": "react"
   },
   {
     "type": "Programming",
@@ -16,8 +16,8 @@
   },
   {
     "type": "Programming",
-    "name": "NodeJS",
-    "id": "nodejs"
+    "name": "Node.JS",
+    "id": "node.js"
   },
   {
     "type": "Programming",

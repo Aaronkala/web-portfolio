@@ -36,7 +36,8 @@ export const Scroller = styled.div`
 
 export const Picture = styled.img`
   object-fit: contain;
-  max-width: 300px;
+  max-width: 320px;
+  max-height: 400px;
 `;
 
 const BaseButton = styled.button`
