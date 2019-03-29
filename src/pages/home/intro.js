@@ -1,5 +1,5 @@
-import React from "react";
-import { Title, Subtitle, Hr } from "../../components/elements";
+import React from 'react';
+import { Title, Subtitle, Hr } from '../../components/elements';
 
 export default class Skills extends React.Component {
   render() {
@@ -8,7 +8,7 @@ export default class Skills extends React.Component {
         <Title>Aaron Hakala</Title>
         <Subtitle>Software engineer</Subtitle>
         <Hr />
-        <p>Hey, I'm a frontend guy interrested in everything tech.</p>
+        <p>Hey, I'm a frontend guy interested in everything tech.</p>
         <p>
           I love playing around with Javascript and I'm super interested in
           fresh Frontend related tech eg. GraphQL, ReasonML & WebAssembly. My

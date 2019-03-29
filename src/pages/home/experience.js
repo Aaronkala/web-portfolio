@@ -11,7 +11,11 @@ export default class Experience extends React.Component {
         <h2>Career</h2>
         <Timeline>
           {career.map(job => (
-            <Event dateStart={job.date.start} dateEnd={job.date.end}>
+            <Event
+              key={`${job.title}-${job.date.start}`}
+              dateStart={job.date.start}
+              dateEnd={job.date.end}
+            >
               <Title>
                 {job.title}
                 {' // '}
@@ -24,7 +28,10 @@ export default class Experience extends React.Component {
         <h2>Education</h2>
         <Timeline>
           {education.map(school => (
-            <Event dateEnd={school.date.end}>
+            <Event
+              key={`${school.title}-${school.date.end}`}
+              dateEnd={school.date.end}
+            >
               <Title>{school.title}</Title>
               {school.subtitle && <SubTitle>{school.subtitle}</SubTitle>}
               {school.description && <p>{school.description}</p>}

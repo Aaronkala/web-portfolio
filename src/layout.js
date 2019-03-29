@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { MainContainer } from './components/elements';
-
 export default class Layout extends React.Component {
   render() {
     return (

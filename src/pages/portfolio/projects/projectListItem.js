@@ -9,7 +9,9 @@ const ProjectListItem = ({ project }) => {
 
   return (
     <ProjectItem key={project.title}>
-      <Title>{project.title}</Title>
+      <Title>
+        <Link href={project.link}>{project.title}</Link>
+      </Title>
       <TimeSpan>
         {project.date.start} - {project.date.end ? project.date.end : 'ongoing'}
       </TimeSpan>
@@ -53,6 +55,12 @@ const Title = styled.h2`
 const TimeSpan = styled.p`
   margin-bottom: 0.5em;
   font-style: italic;
+`;
+
+const Link = styled.a`
+  width: max-content;
+  display: inline;
+  color: ${p => p.theme.color.primary};
 `;
 
 export default ProjectListItem;

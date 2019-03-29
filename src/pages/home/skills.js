@@ -15,7 +15,7 @@ export default () => {
         <h3>Programming</h3>
         <List>
           {programming_skills.map(skill => (
-            <Block>{skill.name}</Block>
+            <Block key={skill.name}>{skill.name}</Block>
           ))}
         </List>
       </Group>
@@ -23,7 +23,7 @@ export default () => {
         <h3>Design</h3>
         <List>
           {design_skills.map(skill => (
-            <Block>{skill.name}</Block>
+            <Block key={skill.name}>{skill.name}</Block>
           ))}
         </List>
       </Group>

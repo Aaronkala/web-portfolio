@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom';
 
 const NavItems = () => {
   return [
-    <NavItem to="/">Home</NavItem>,
-    <NavItem to="/portfolio">Portfolio</NavItem>,
+    <NavItem to="/" key="link-home">
+      Home
+    </NavItem>,
+    <NavItem to="/portfolio" key="link-portfolio">
+      Portfolio
+    </NavItem>,
   ];
 };
 
