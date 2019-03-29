@@ -1,6 +1,8 @@
 [
   {
     "title": "Digital Communications",
+    "location": "Helsinki, Finland",
+    "type": "University",
     "subtitle": "Metropolia University of Applied Sciences",
     "description": "UX design, Design Thinking, User-centered Design, Usability, Accessibility, Prototyping, Web Programming, Don't make me think",
     "date": {
@@ -8,7 +10,8 @@
     }
   },
   {
-    "title": "High school",
+    "type": "High school",
+    "location": "Vantaa, Finland",
     "subtitle": "Tikkurilan lukio",
     "date": {
       "end": "1 Jun 2012"
