@@ -39,7 +39,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  grid-column-gap: 20px;
+  grid-column-gap: 30px;
   grid-row-gap: 50px;
   @media (min-width: ${p => p.theme.breakpoints.lg}) {
     grid-template-columns: 1fr 1fr;

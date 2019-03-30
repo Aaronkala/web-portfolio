@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Img from 'react-image';
 
 import SkillBlock from '../../../components/skill-block';
 import { ButtonTransparent } from '../../../components/elements';
@@ -9,6 +10,7 @@ const ProjectListItem = ({ project }) => {
 
   return (
     <ProjectItem key={project.title}>
+      <Banner src={`${process.env.PUBLIC_URL}/img/${project.banner}`} />
       <Title>
         <Link href={project.link}>{project.title}</Link>
       </Title>
@@ -43,13 +45,18 @@ const ProjectListItem = ({ project }) => {
   );
 };
 
+const Banner = styled(Img)`
+  width: 100%;
+  border-radius: 3px;
+`;
+
 const ProjectItem = styled.section`
   display: block;
-  margin-bottom: 1em;
 `;
 
 const Title = styled.h2`
-  margin-bottom: 0.2em;
+  margin-top: 0.8em;
+  margin-bottom: 0.5em;
 `;
 
 const TimeSpan = styled.p`
