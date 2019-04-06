@@ -10,7 +10,9 @@ const ProjectListItem = ({ project }) => {
 
   return (
     <ProjectItem key={project.title}>
-      <Banner src={`${process.env.PUBLIC_URL}/img/${project.banner}`} />
+      <Link href={project.link}>
+        <Banner src={`${process.env.PUBLIC_URL}/img/${project.banner}`} />
+      </Link>
       <Title>
         <Link href={project.link}>{project.title}</Link>
       </Title>
