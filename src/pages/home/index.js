@@ -14,7 +14,7 @@ export default class Home extends React.Component {
     return (
       <React.Fragment>
         <Head title="Hakala - Home" name="About me" />
-        <Layout left={<Sidebar />} right={<Content />} />;
+        <Layout left={<Sidebar />} right={<Content />} />
       </React.Fragment>
     );
   }

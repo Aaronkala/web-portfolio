@@ -94,7 +94,9 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.05em;
     font-weight: 700;
   }
-  small, .font_small {font-size: 0.707em;}
+  small, .font_small {
+    font-size: 0.707em;
+  }
 `;
 
 export default GlobalStyles;
