@@ -161,5 +161,18 @@
       "start": "07.08.2018",
       "end": "31.08.2018"
     }
+  },
+  {
+    "title": "Nordea Personal Finance",
+    "banner": "personal-finance.jpg",
+    "link": "https://github.com/Aaronkala/personal-finance",
+    "role": "Developer, Designer",
+    "description": "",
+    "type": "personal",
+    "skills": [{ "id": "javascript", "name": "JavaScript" }],
+    "date": {
+      "start": "07.01.2019",
+      "end": ""
+    }
   }
 ]
