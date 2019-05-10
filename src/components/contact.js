@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export default class Contact extends React.Component {
   render() {
@@ -7,8 +7,12 @@ export default class Contact extends React.Component {
       <section>
         <h2>Contact</h2>
         <p>
-          <Link href="https://github.com/aaronkala" target="blank">Github</Link>
-          <Link href="https://linkedin.com/in/aaron-hakala" target="blank">Linkedin</Link>
+          <Link href="https://github.com/aaronkala" target="blank">
+            Github
+          </Link>
+          <Link href="https://linkedin.com/in/aaron-hakala" target="blank">
+            Linkedin
+          </Link>
         </p>
         <p>
           <Link href="mailto:aaron.hakala@gmail.com" target="_top">
@@ -25,7 +29,7 @@ export default class Contact extends React.Component {
 
 const Link = styled.a`
   color: white;
-  background: ${p => p.theme.color.alert};
+  background: ${p => p.theme.colors.alert};
   &:not(:first-of-type) {
     margin-left: 15px;
   }

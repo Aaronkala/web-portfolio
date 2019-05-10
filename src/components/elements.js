@@ -62,7 +62,7 @@ const BaseButton = styled.button`
 `;
 
 export const ButtonTransparent = styled(BaseButton)`
-  border: 2px solid ${p => p.theme.color.primary};
+  border: 2px solid ${p => p.theme.colors.primary};
   &:not(:last-child) {
     margin-right: 1em;
   }
@@ -75,13 +75,13 @@ export const ButtonTransparent = styled(BaseButton)`
 
 export const Button = styled(BaseButton)`
   background-color: ${p =>
-    p.active ? p.theme.color.secondary : p.theme.color.primary};
+    p.active ? p.theme.colors.secondary : p.theme.colors.primary};
   color: white;
   box-shadow: 4px 4px 0px 0px
-    ${p => (p.active ? p.theme.color.primary : p.theme.color.secondary)};
+    ${p => (p.active ? p.theme.colors.primary : p.theme.colors.secondary)};
   &:hover,
   &:focus {
-    box-shadow: 4px 4px 0px 0px ${p => p.theme.color.primary};
-    background-color: ${p => p.theme.color.secondary};
+    box-shadow: 4px 4px 0px 0px ${p => p.theme.colors.primary};
+    background-color: ${p => p.theme.colors.secondary};
   }
 `;

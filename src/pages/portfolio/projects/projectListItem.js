@@ -69,7 +69,7 @@ const TimeSpan = styled.p`
 const Link = styled.a`
   width: max-content;
   display: inline;
-  color: ${p => p.theme.color.primary};
+  color: ${p => p.theme.colors.primary};
 `;
 
 export default ProjectListItem;

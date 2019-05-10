@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const NavItems = () => {
+// The navigation items that will be in all navs
+// TODO: this should come as a prop
+export const NavItems = () => {
   return [
     <NavItem to="/" key="link-home">
       Home
@@ -13,7 +15,18 @@ const NavItems = () => {
   ];
 };
 
-const SpecialNavigation = () => {
+const NavItem = styled(Link)`
+  width: max-content;
+  display: inline;
+  color: ${p => p.theme.colors.primary};
+  &:not(:last-of-type) {
+    margin-right: 1em;
+  }
+`;
+
+// -------------------------
+// CENTERED
+const Centered = () => {
   return (
     <Nav>
       <Wrapper>{NavItems()}</Wrapper>
@@ -21,47 +34,30 @@ const SpecialNavigation = () => {
   );
 };
 
-export const NavBar = () => {
+const Nav = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+`;
+
+const Wrapper = styled.div`
+  padding: 1em 2em;
+  width: max-content;
+  margin: 5px auto;
+  background-color: white;
+`;
+
+// -------------------------
+// BAR
+const Bar = () => {
   return (
     <TopBar>
       <Container>{NavItems()}</Container>
     </TopBar>
   );
 };
-
-const Nav = styled.nav`
-  position: relative;
-  height: 0;
-  z-index: 1;
-  @media (max-width: ${p => p.theme.breakpoints.xl}) {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-`;
-
-const Wrapper = styled.div`
-  position: absolute;
-  bottom: -100%;
-  margin-bottom: 2em;
-  @media (max-width: ${p => p.theme.breakpoints.xl}) {
-    background-color: white;
-    position: relative;
-    margin: 1em auto;
-    padding: 1em 5em;
-    width: max-content;
-  }
-`;
-
-const NavItem = styled(Link)`
-  width: max-content;
-  display: inline;
-  color: ${p => p.theme.color.primary};
-  &:not(:last-of-type) {
-    margin-right: 1em;
-  }
-`;
 
 const TopBar = styled.div`
   height: 4em;
@@ -78,12 +74,44 @@ const Container = styled.div`
   width: 100%;
   align-items: center;
   display: flex;
-  @media (max-width: ${p => p.theme.breakpoints.xl}) {
+  @media (${p => p.theme.mediaQueries.xl}) {
     max-width: 800px;
   }
-  @media (max-width: ${p => p.theme.breakpoints.xl}) {
+  @media (${p => p.theme.mediaQueries.xl}) {
     padding: 0 15px;
   }
 `;
 
-export default SpecialNavigation;
+// -------------------------
+// HOVERING
+const Hovering = () => (
+  <HoveringContainer>
+    <HoveringNav>{NavItems()}</HoveringNav>
+  </HoveringContainer>
+);
+
+const HoveringContainer = styled.nav`
+  position: relative;
+`;
+
+const HoveringNav = styled.div`
+  position: absolute;
+  bottom: -100%;
+  margin: 1em auto;
+`;
+
+const NAVS = {
+  bar: Bar, // top left nav bar
+  centered: Centered, // fixed top and centered
+  hovering: Hovering, // outside parent container
+};
+
+export default ({ type }) => {
+  console.log(type);
+  console.log(NAVS[type]);
+  if (NAVS[type] !== undefined) {
+    return React.createElement(NAVS[type]);
+  }
+  console.error('Type not in list of possible nav elements');
+  return null;
+};

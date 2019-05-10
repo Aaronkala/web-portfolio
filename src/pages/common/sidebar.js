@@ -1,13 +1,16 @@
 import React from 'react';
+import { Only } from 'atomic-layout';
 
-import Navigation from '../../components/navigation';
+import Nav from '../../components/navigation';
 import { Picture } from '../../components/elements';
 import me from '../../static/aaron.jpg';
 
 const Sidebar = () => {
   return (
     <React.Fragment>
-      <Navigation />
+      <Only from="lg">
+        <Nav type="hovering" />
+      </Only>
       <Picture src={me} />
     </React.Fragment>
   );

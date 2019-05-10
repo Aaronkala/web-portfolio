@@ -1,5 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Composition, Only } from 'atomic-layout';
+
+const areas = `right`;
+const areasMd = `left right`;
 
 export default class Layout extends React.Component {
   render() {
@@ -8,10 +12,23 @@ export default class Layout extends React.Component {
         {this.props.children ? (
           <CardFull>{this.props.children}</CardFull>
         ) : (
-          <React.Fragment>
-            <CardLeft>{this.props.left}</CardLeft>
-            <CardRight>{this.props.right}</CardRight>
-          </React.Fragment>
+          <Composition areas={areas} areasMd={areasMd} gutter={20}>
+            {({ Left, Right }) => (
+              <React.Fragment>
+                <Left>
+                  <CardLeft>{this.props.left}</CardLeft>
+                </Left>
+                <Right>
+                  <Only for="xs">
+                    <CardRight>{this.props.right}</CardRight>
+                  </Only>
+                  <Only from="xs">
+                    <CardFull>{this.props.children}</CardFull>
+                  </Only>
+                </Right>
+              </React.Fragment>
+            )}
+          </Composition>
         )}
       </Container>
     );
@@ -50,8 +67,6 @@ const CardRight = styled.div`
   width: 70%;
   height: 100vh;
   align-items: center;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
   scrollbar-width: none;
   &::-webkit-scrollbar {

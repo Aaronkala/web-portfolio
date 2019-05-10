@@ -21,7 +21,7 @@ const Content = ({ filter }) => {
 
 const Spacer = styled.section`
   margin-top: 8em;
-  @media (max-width: ${p => p.theme.breakpoints.xl}) {
+  @media (${p => p.theme.mediaQueries.xl}) {
     padding: 0 15px;
   }
 `;

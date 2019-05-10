@@ -26,10 +26,10 @@ export default class Content extends React.Component {
 
 const Paddington = styled.div`
   padding: 2em 1em;
-  @media screen and (min-width: ${p => p.theme.breakpoints.sm}) {
+  @media (${p => p.theme.mediaQueries.sm}) {
     padding: 2em 2em;
   }
-  @media screen and (min-width: ${p => p.theme.breakpoints.md}) {
+  @media (${p => p.theme.mediaQueries.md}) {
     padding: 2em 3em;
   }
   & > *:not(:last-child) {
