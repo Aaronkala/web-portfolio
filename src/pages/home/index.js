@@ -1,14 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Only } from 'atomic-layout';
+import { Image } from 'rebass';
 
 import SplitLayout from '../../components/splitLayout/splitLayout';
-import Container from '../../components/container';
+import Container from '../../components/container/container';
 import Content from './content';
 import analytics from '../../utils/analytics';
-import Head from '../../components/head';
-import Nav from '../../components/navigation';
-import { Picture } from '../../components/elements';
+import Head from '../../components/head/head';
+import Nav from '../../components/navigation/navigation';
 import me from '../../static/aaron.jpg';
 
 export default class Home extends React.Component {
@@ -20,28 +18,20 @@ export default class Home extends React.Component {
       <React.Fragment>
         <Head title="Hakala - Home" name="About me" />
         <Container>
-          <FrontPageWrapper>
+          <div>
             <SplitLayout
               left={
                 <React.Fragment>
-                  <Only to="lg">
-                    <Nav type="centered" />
-                  </Only>
-                  <Only from="lg">
-                    <Nav type="hovering" />
-                  </Only>
-                  <Picture src={me} />
+                  <Nav type="centered" />
+                  <Nav type="hovering" />
+                  <Image src={me} />
                 </React.Fragment>
               }
               right={<Content />}
             />
-          </FrontPageWrapper>
+          </div>
         </Container>
       </React.Fragment>
     );
   }
 }
-
-const FrontPageWrapper = styled.div`
-  margin-top: 20%;
-`;

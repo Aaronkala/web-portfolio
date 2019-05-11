@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import { Button } from './elements';
+import { Button } from 'rebass';
 
 const Block = ({ children, skill = null, active }) => {
   // builds a custom link :sweat-smile:

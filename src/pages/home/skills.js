@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Block from '../../components/skill-block';
+import Block from '../../components/skillBlock/skillBlock';
 import skillData from '../../static/data/skills.json';
 
 export default () => {

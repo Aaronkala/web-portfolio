@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Timeline, { Event } from '../../components/timeline';
+import Timeline, { Event } from '../../components/timeline/timeline';
 import career from '../../static/data/career.json';
 import education from '../../static/data/education.json';
 

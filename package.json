@@ -7,7 +7,6 @@
   "main": "src/frontend/index.js",
   "dependencies": {
     "@styled-system/typography": "^1.0.0-9",
-    "atomic-layout": "^0.7.2",
     "history": "*",
     "polished": "^3.0.2",
     "react": "^16.8.3",
@@ -34,5 +33,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-styleguidist": "^9.0.9"
+  }
 }

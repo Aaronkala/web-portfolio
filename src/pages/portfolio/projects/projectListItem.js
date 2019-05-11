@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Img from 'react-image';
+import { Button } from 'rebass';
 
-import SkillBlock from '../../../components/skill-block';
-import { ButtonTransparent } from '../../../components/elements';
+import SkillBlock from '../../../components/skillBlock/skillBlock';
 
 const ProjectListItem = ({ project }) => {
   const [showSkills, setShowSkills] = useState(false);
@@ -33,14 +33,22 @@ const ProjectListItem = ({ project }) => {
             </SkillBlock>
           ))}
         {showSkills && project.skills.length > 7 && (
-          <ButtonTransparent as="button" onClick={() => setShowSkills(false)}>
+          <Button
+            variant="primary"
+            as="button"
+            onClick={() => setShowSkills(false)}
+          >
             Hide some
-          </ButtonTransparent>
+          </Button>
         )}
         {!showSkills && project.skills.length > 7 && (
-          <ButtonTransparent as="button" onClick={() => setShowSkills(true)}>
+          <Button
+            variant="primary"
+            as="button"
+            onClick={() => setShowSkills(true)}
+          >
             Show all
-          </ButtonTransparent>
+          </Button>
         )}
       </div>
     </ProjectItem>

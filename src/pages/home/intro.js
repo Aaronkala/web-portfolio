@@ -1,12 +1,13 @@
 import React from 'react';
-import { Title, Subtitle, Hr } from '../../components/elements';
+import { Heading } from 'rebass';
+import Hr from '../../components/hr/hr';
 
 export default class Skills extends React.Component {
   render() {
     return (
       <section>
-        <Title>Aaron Hakala</Title>
-        <Subtitle>Software engineer</Subtitle>
+        <Heading>Aaron Hakala</Heading>
+        <Heading>Software engineer</Heading>
         <Hr />
         <p>Hey, I'm a frontend guy interested in everything tech.</p>
         <p>

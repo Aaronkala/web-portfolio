@@ -1,13 +1,13 @@
 import React from 'react';
-
-import { Title, Hr } from '../../../components/elements';
+import { Heading } from 'rebass';
+import Hr from '../../../components/hr/hr';
 import Filter from './filter';
 import ProjectList from './projectList';
 
 const Projects = ({ filter }) => {
   return (
     <React.Fragment>
-      <Title>Projects</Title>
+      <Heading>Projects</Heading>
       <Hr />
       <Filter filter={filter} />
       <Hr long />
