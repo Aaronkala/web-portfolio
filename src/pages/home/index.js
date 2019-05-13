@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'rebass';
+import { Box, Image } from 'rebass';
 
 import SplitLayout from '../../components/splitLayout/splitLayout';
 import Container from '../../components/container/container';
@@ -15,23 +15,22 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <React.Fragment>
+      <Box mt={{ xs: 3, lg: 7 }}>
         <Head title="Hakala - Home" name="About me" />
+        <Nav type="centered" display={{ xs: 'initial', lg: 'none' }} />
         <Container>
-          <div>
-            <SplitLayout
-              left={
-                <React.Fragment>
-                  <Nav type="centered" />
-                  <Nav type="hovering" />
-                  <Image src={me} />
-                </React.Fragment>
-              }
-              right={<Content />}
-            />
-          </div>
+          <SplitLayout
+            left={
+              <React.Fragment>
+                <Nav type="hovering" display={{ xs: 'none', lg: 'flex' }} />
+                {/* TODO: fix profile image width and height */}
+                <Image src={me} mx="auto" />
+              </React.Fragment>
+            }
+            right={<Content />}
+          />
         </Container>
-      </React.Fragment>
+      </Box>
     );
   }
 }

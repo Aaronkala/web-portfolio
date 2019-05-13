@@ -5,9 +5,9 @@ import { Button } from 'rebass';
 
 import SkillBlock from '../../../components/skillBlock/skillBlock';
 
+// TODO: add github links to projects
 const ProjectListItem = ({ project }) => {
   const [showSkills, setShowSkills] = useState(false);
-
   return (
     <ProjectItem key={project.title}>
       <Link href={project.link}>
@@ -22,19 +22,33 @@ const ProjectListItem = ({ project }) => {
       <p>{project.description}</p>
       <div>
         {project.skills.slice(0, 7).map(skill => (
-          <SkillBlock skill={skill.name} key={skill.id}>
+          <SkillBlock
+            mr={3}
+            mb={3}
+            variant="primary"
+            skill={skill.name}
+            key={skill.id}
+          >
             {skill.name}
           </SkillBlock>
         ))}
         {showSkills &&
           project.skills.slice(7).map(skill => (
-            <SkillBlock skill={skill.name} key={skill.id}>
+            <SkillBlock
+              mr={3}
+              mb={3}
+              variant="primary"
+              skill={skill.name}
+              key={skill.id}
+            >
               {skill.name}
             </SkillBlock>
           ))}
         {showSkills && project.skills.length > 7 && (
           <Button
             variant="primary"
+            mr={3}
+            mb={3}
             as="button"
             onClick={() => setShowSkills(false)}
           >
@@ -44,6 +58,8 @@ const ProjectListItem = ({ project }) => {
         {!showSkills && project.skills.length > 7 && (
           <Button
             variant="primary"
+            mr={3}
+            mb={3}
             as="button"
             onClick={() => setShowSkills(true)}
           >

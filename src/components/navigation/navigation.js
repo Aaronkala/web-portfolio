@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { display } from 'styled-system';
 
 // The navigation items that will be in all navs
 // TODO: this should come as a prop
@@ -26,9 +27,9 @@ const NavItem = styled(Link)`
 
 // -------------------------
 // CENTERED
-const Centered = () => {
+const Centered = props => {
   return (
-    <Nav>
+    <Nav {...props}>
       <Wrapper>{NavItems()}</Wrapper>
     </Nav>
   );
@@ -40,6 +41,7 @@ const Nav = styled.nav`
   left: 0;
   width: 100%;
   z-index: 100;
+  ${display};
 `;
 
 const Wrapper = styled.div`
@@ -51,47 +53,45 @@ const Wrapper = styled.div`
 
 // -------------------------
 // BAR
-const Bar = () => {
+const Bar = props => {
   return (
-    <TopBar>
+    <TopBar {...props}>
       <Container>{NavItems()}</Container>
     </TopBar>
   );
 };
 
 const TopBar = styled.div`
+  top: 0;
   height: 4em;
   position: fixed;
-  margin-bottom: 3em;
   background-color: white;
   width: 100%;
   display: flex;
+  ${display};
 `;
 
 const Container = styled.div`
-  margin: 0 auto;
-  max-width: ${p => p.theme.breakpoints.xl};
+  max-width: ${p => p.theme.breakpoints.lg};
   width: 100%;
   align-items: center;
   display: flex;
-  @media (${p => p.theme.mediaQueries.xl}) {
+  @media (${p => p.theme.mediaQueries.lg}) {
     max-width: 800px;
-  }
-  @media (${p => p.theme.mediaQueries.xl}) {
-    padding: 0 15px;
   }
 `;
 
 // -------------------------
 // HOVERING
-const Hovering = () => (
-  <HoveringContainer>
+const Hovering = props => (
+  <HoveringContainer {...props}>
     <HoveringNav>{NavItems()}</HoveringNav>
   </HoveringContainer>
 );
 
 const HoveringContainer = styled.nav`
   position: relative;
+  ${display};
 `;
 
 const HoveringNav = styled.div`
@@ -106,12 +106,9 @@ const NAVS = {
   hovering: Hovering, // outside parent container
 };
 
-export default ({ type }) => {
-  console.log(type);
-  console.log(NAVS[type]);
-  if (NAVS[type] !== undefined) {
-    return React.createElement(NAVS[type]);
+export default props => {
+  if (NAVS[props.type] !== undefined) {
+    return React.createElement(NAVS[props.type], props);
   }
-  console.error('Type not in list of possible nav elements');
   return null;
 };

@@ -8,11 +8,14 @@ const areas = `
 
 const areasMd = `"left right"`;
 
-export default ({ gutter, left, right }) => (
-  <Grid gridTemplateAreas={{ xs: areas, xl: areasMd }} gutter={gutter || 20}>
-    <React.Fragment>
-      <GridArea gridArea="left">{left}</GridArea>
-      <GridArea gridArea="right">{right}</GridArea>
-    </React.Fragment>
+export default ({ gutter, left, right, ...rest }) => (
+  <Grid
+    gridTemplateAreas={{ xs: areas, lg: areasMd }}
+    gridGap={5}
+    gridTemplateColumns={{ xs: '100%', lg: '25% auto' }}
+    {...rest}
+  >
+    <GridArea gridArea="left">{left}</GridArea>
+    <GridArea gridArea="right">{right}</GridArea>
   </Grid>
 );
