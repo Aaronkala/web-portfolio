@@ -26,7 +26,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "styleguide": "npx styleguidist server"
   },
   "browserslist": [
     ">0.2%",

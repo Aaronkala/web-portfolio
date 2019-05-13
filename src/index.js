@@ -1,29 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ThemeProvider } from 'styled-components';
-import { Router, Route, Switch } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
+import { Route, Switch } from 'react-router-dom';
 
 import Home from './pages/home';
 import Portfolio from './pages/portfolio';
-import theme from './styles/theme';
-import GlobalStyles from './styles/globalStyles';
-
-const history = createBrowserHistory();
+import Wrapper from './components/wrapper/wrapper';
 
 function App() {
   return (
     <div className="App">
-      <GlobalStyles />
-      <ThemeProvider theme={theme}>
-        <Router history={history}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/portfolio" component={Portfolio} />
-            <Route path="/portfolio/:filter" component={Portfolio} />
-          </Switch>
-        </Router>
-      </ThemeProvider>
+      <Wrapper>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route path="/portfolio/:filter" component={Portfolio} />
+        </Switch>
+      </Wrapper>
     </div>
   );
 }

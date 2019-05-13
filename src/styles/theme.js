@@ -48,8 +48,22 @@ const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   buttons: {
     primary: {
+      display: 'inline-block',
+      padding: '0.5em 1em',
+      width: 'max-content',
+      border: 'medium none',
+      outline: 'currentcolor none medium',
+      transition: 'all 0.1s ease 0s',
+      cursor: 'pointer',
+      boxShadow: `${color.secondary} 4px 4px 0px 0px`,
+      borderRadius: 0,
       color: color.text,
       backgroundColor: color.primary,
+      '&:hover, &:active': {
+        boxShadow: 'rgb(96, 76, 141) 4px 4px 0px 0px',
+        backgroundColor: 'rgb(106, 217, 121)',
+        transform: 'scale(1.2)',
+      },
     },
     outline: {
       color: color.primary,

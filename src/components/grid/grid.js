@@ -9,6 +9,7 @@ import {
   space,
   gridArea,
   display,
+  gridAutoFlow,
 } from 'styled-system';
 
 const Grid = styled.div`
@@ -19,6 +20,7 @@ const Grid = styled.div`
     ${gridAutoColumns}
     ${gridTemplateRows}
     ${gridTemplateColumns}
+    ${gridAutoFlow}
     ${space}
     ${gridArea}
     ${display}
