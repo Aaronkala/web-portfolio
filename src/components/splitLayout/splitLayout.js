@@ -12,7 +12,7 @@ export default ({ gutter, left, right, ...rest }) => (
   <Grid
     gridTemplateAreas={{ xs: areas, lg: areasMd }}
     gridGap={5}
-    gridTemplateColumns={{ xs: '100%', lg: '25% auto' }}
+    gridTemplateColumns={{ xs: '100%', lg: '300px auto' }}
     {...rest}
   >
     <GridArea gridArea="left">{left}</GridArea>

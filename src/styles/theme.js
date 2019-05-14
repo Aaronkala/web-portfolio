@@ -44,7 +44,7 @@ const theme = {
     heading: 'IBM-Plex-Mono, monospace',
     body: 'IBM-Plex-Mono, monospace',
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+  fontSizes: [10, 12, 14, 16, 18, 24, 32, 48, 64],
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   buttons: {
     primary: {
@@ -59,6 +59,8 @@ const theme = {
       borderRadius: 0,
       color: color.text,
       backgroundColor: color.primary,
+      fontWeight: 300,
+      textDecoration: 'underline',
       '&:hover, &:active': {
         boxShadow: 'rgb(96, 76, 141) 4px 4px 0px 0px',
         backgroundColor: 'rgb(106, 217, 121)',

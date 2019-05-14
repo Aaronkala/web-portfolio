@@ -9,7 +9,7 @@ import Container from '../../components/container/container';
 const Portfolio = props => {
   analytics({ event: 'spa-pageview' });
   return (
-    <Container mt={6}>
+    <Container mt={6} mb={7}>
       <Head title="Hakala - Portfolio" name="Web Portfolio" />
       <Nav type="bar" />
       <Content filter={props.match.params.filter} />

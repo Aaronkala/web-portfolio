@@ -12,7 +12,7 @@ export default () => {
   );
   const design_skills = skillData.filter(skill => skill.type === 'Design');
   return (
-    <div>
+    <Box as="section" mb={5}>
       <h2>Expertise</h2>
       <Group>
         <h3>Programming</h3>
@@ -35,7 +35,7 @@ export default () => {
           ))}
         </Box>
       </Group>
-    </div>
+    </Box>
   );
 };
 
