@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Box, Flex, Button, Image } from 'rebass';
-import { justifyContent, display } from 'styled-system';
 
 import SkillBlock from '../../../components/skillBlock/skillBlock';
 import SvgGit from './gitLogo';
@@ -34,6 +33,10 @@ const ProjectListItem = ({ project }) => {
       </Flex>
       <p>{project.description}</p>
       <div>
+        {/*
+          TODO: Write repeating code better in projectListItem
+          BODY: SkillBlock and button loops are repeat the code alot, they could be written as a function
+        */}
         {project.skills.slice(0, 7).map(skill => (
           <SkillBlock
             mr={3}

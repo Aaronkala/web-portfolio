@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { display } from 'styled-system';
 
 // The navigation items that will be in all navs
-// TODO: this should come as a prop
+// TODO:  Nav items should come from somewhere else
 export const NavItems = () => {
   return [
     <NavItem to="/" key="link-home">
