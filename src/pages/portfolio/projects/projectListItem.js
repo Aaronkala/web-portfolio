@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Img from 'react-image';
-import { Button } from 'rebass';
+import { Box, Flex, Button, Image } from 'rebass';
+import { justifyContent, display } from 'styled-system';
 
 import SkillBlock from '../../../components/skillBlock/skillBlock';
+import SvgGit from './gitLogo';
 
 // TODO: add github links to projects
 const ProjectListItem = ({ project }) => {
@@ -13,12 +14,24 @@ const ProjectListItem = ({ project }) => {
       <Link href={project.link}>
         <Banner src={`${process.env.PUBLIC_URL}/img/${project.banner}`} />
       </Link>
-      <Title>
-        <Link href={project.link}>{project.title}</Link>
-      </Title>
-      <TimeSpan>
-        {project.date.start} - {project.date.end ? project.date.end : 'ongoing'}
-      </TimeSpan>
+      <Flex justifyContent="space-between">
+        <Box>
+          <Title>
+            <Link href={project.link}>{project.title}</Link>
+          </Title>
+          <TimeSpan>
+            {project.date.start} -{' '}
+            {project.date.end ? project.date.end : 'ongoing'}
+          </TimeSpan>
+        </Box>
+        {project['version-control'] && (
+          <Flex alignItems="center">
+            <a href={project['version-control']} title="link to repository">
+              <SvgGit />
+            </a>
+          </Flex>
+        )}
+      </Flex>
       <p>{project.description}</p>
       <div>
         {project.skills.slice(0, 7).map(skill => (
@@ -71,7 +84,7 @@ const ProjectListItem = ({ project }) => {
   );
 };
 
-const Banner = styled(Img)`
+const Banner = styled(Image)`
   width: 100%;
   border-radius: 3px;
 `;

@@ -10,9 +10,9 @@ const areasMd = `"left right"`;
 
 export default ({ gutter, left, right, ...rest }) => (
   <Grid
-    gridTemplateAreas={{ xs: areas, lg: areasMd }}
+    gridTemplateAreas={{ xs: areas, md: areasMd }}
     gridGap={5}
-    gridTemplateColumns={{ xs: '100%', lg: '300px auto' }}
+    gridTemplateColumns={{ xs: '100%', md: '300px auto' }}
     {...rest}
   >
     <GridArea gridArea="left">{left}</GridArea>

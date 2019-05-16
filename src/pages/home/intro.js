@@ -14,7 +14,7 @@ P.defaultProps = {
 export default class Skills extends React.Component {
   render() {
     return (
-      <Box as="section" mb={5}>
+      <Box as="section" {...this.props}>
         <Heading fontSize={6} mb={3}>
           Aaron Hakala
         </Heading>

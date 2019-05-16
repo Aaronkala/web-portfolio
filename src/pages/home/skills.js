@@ -4,7 +4,7 @@ import { Box } from 'rebass';
 import Block from '../../components/skillBlock/skillBlock';
 import skillData from '../../static/data/skills.json';
 
-export default () => {
+export default props => {
   // TODO: Change skills mapping to a reducer
   // BODY: It can be a reducer or a for loop. So that we don't need to loop them 2 times on each render
   const programming_skills = skillData.filter(
@@ -12,7 +12,7 @@ export default () => {
   );
   const design_skills = skillData.filter(skill => skill.type === 'Design');
   return (
-    <Box as="section" mb={5}>
+    <Box as="section" {...props}>
       <h2>Expertise</h2>
       <Group>
         <h3>Programming</h3>

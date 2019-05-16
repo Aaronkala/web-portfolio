@@ -7,7 +7,7 @@ import ProjectList from './projectList';
 const Projects = ({ filter }) => {
   return (
     <React.Fragment>
-      <Heading>Projects</Heading>
+      <Heading fontSize={6}>Projects</Heading>
       <Hr />
       <Filter filter={filter} />
       <Hr long />

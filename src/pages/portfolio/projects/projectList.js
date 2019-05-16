@@ -41,7 +41,7 @@ const Grid = styled.div`
   width: 100%;
   grid-column-gap: 30px;
   grid-row-gap: 50px;
-  @media (${p => p.theme.mediaQueries.lg}) {
+  @media (${p => p.theme.mediaQueries.md}) {
     grid-template-columns: 1fr 1fr;
   }
 `;

@@ -72,11 +72,11 @@ const TopBar = styled.div`
 `;
 
 const Container = styled.div`
-  max-width: ${p => p.theme.breakpoints.lg};
+  max-width: ${p => p.theme.breakpoints.md};
   width: 100%;
   align-items: center;
   display: flex;
-  @media (${p => p.theme.mediaQueries.lg}) {
+  @media (${p => p.theme.mediaQueries.md}) {
     max-width: 800px;
   }
 `;

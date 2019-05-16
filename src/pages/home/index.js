@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box, Image } from 'rebass';
-import { position } from 'styled-system';
+import { position, display, maxWidth, maxHeight } from 'styled-system';
 
 import SplitLayout from '../../components/splitLayout/splitLayout';
 import Container from '../../components/container/container';
@@ -13,6 +13,13 @@ import me from '../../static/aaron.jpg';
 
 const PositionBox = styled(Box)`
   ${position};
+  ${display};
+`;
+
+const CustomImage = styled(Image)`
+  max-width: 300px;
+  max-height: 400px;
+  object-fit: cover;
 `;
 
 export default class Home extends React.Component {
@@ -21,16 +28,18 @@ export default class Home extends React.Component {
   }
   render() {
     return (
-      <Box mt={{ xs: 3, lg: 7 }} mb={7}>
+      <Box mt={{ xs: 3, md: 7 }} mb={7}>
         <Head title="Hakala - Home" name="About me" />
-        <Nav type="centered" display={{ xs: 'initial', lg: 'none' }} />
+        <Nav type="centered" display={{ xs: 'initial', md: 'none' }} />
         <Container>
           <SplitLayout
             left={
-              <PositionBox position={{ xs: 'initial', lg: 'fixed' }}>
-                <Nav type="hovering" display={{ xs: 'none', lg: 'flex' }} />
+              <PositionBox position={{ xs: 'initial', md: 'fixed' }}>
+                <Nav type="hovering" display={{ xs: 'none', md: 'flex' }} />
                 {/* TODO: fix profile image width and height */}
-                <Image src={me} mx="auto" width={300} />
+                <PositionBox display="flex">
+                  <CustomImage src={me} mx="auto" mt={{ xs: 4, md: 0 }} />
+                </PositionBox>
               </PositionBox>
             }
             right={<Content />}

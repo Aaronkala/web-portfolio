@@ -9,9 +9,9 @@ export default class Content extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Intro />
-        <Skills />
-        <Experience />
+        <Intro mb={6} />
+        <Skills mb={6} />
+        <Experience mb={6} />
         <Contact />
       </React.Fragment>
     );
