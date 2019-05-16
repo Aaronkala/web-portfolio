@@ -1,2 +1,4 @@
 todo:
   keyword: 'TODO:'
+  bodyKeyword: 'BODY:'
+  caseSensitive: True
