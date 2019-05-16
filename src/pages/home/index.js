@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Box, Image } from 'rebass';
-import { position, display, maxWidth, maxHeight } from 'styled-system';
+import { position, display } from 'styled-system';
 
 import SplitLayout from '../../components/splitLayout/splitLayout';
 import Container from '../../components/container/container';

@@ -5,6 +5,7 @@ const Path = styled.path`
   fill: ${p => p.theme.colors.primary};
 `;
 
+// TODO: Git logo file should be moved to a different place
 const SvgGit = props => (
   <svg width="2em" height="2em" viewBox="0 0 400 400" {...props}>
     <Path
