@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Timeline, { Event } from '../../components/timeline';
+import { Box } from 'rebass';
+import Timeline, { Event } from '../../components/timeline/timeline';
 import career from '../../static/data/career.json';
 import education from '../../static/data/education.json';
 
-export default () => {
+export default props => {
   const header = (main, secondary) => {
     if (main && secondary) {
       return `${main} // ${secondary}`;
@@ -12,7 +13,7 @@ export default () => {
     return main ? main : secondary;
   };
   return (
-    <div>
+    <Box as="section" {...props}>
       <h2>Career</h2>
       <Timeline>
         {career.map(job => (
@@ -40,7 +41,7 @@ export default () => {
           </Event>
         ))}
       </Timeline>
-    </div>
+    </Box>
   );
 };
 

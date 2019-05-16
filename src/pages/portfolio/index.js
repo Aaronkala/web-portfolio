@@ -1,21 +1,19 @@
 import React from 'react';
 
-import Layout from '../../layout';
 import Content from './content';
-import { NavBar } from '../../components/navigation';
-import Head from '../../components/head';
+import Nav from '../../components/navigation/navigation';
+import Head from '../../components/head/head';
 import analytics from '../../utils/analytics';
+import Container from '../../components/container/container';
 
 const Portfolio = props => {
   analytics({ event: 'spa-pageview' });
   return (
-    <React.Fragment>
+    <Container mt={6} mb={7}>
       <Head title="Hakala - Portfolio" name="Web Portfolio" />
-      <NavBar />
-      <Layout>
-        <Content filter={props.match.params.filter} />
-      </Layout>
-    </React.Fragment>
+      <Nav type="bar" />
+      <Content filter={props.match.params.filter} />
+    </Container>
   );
 };
 

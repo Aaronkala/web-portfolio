@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import theme from './theme';
+import typography from '@styled-system/typography';
 
 /* eslint-disable */
 
@@ -34,6 +35,8 @@ const GlobalStyles = createGlobalStyle`
     display: block;
     position: relative;
   }
+  ${typography}
+  
   h1,
   h2,
   h3,
@@ -58,10 +61,10 @@ const GlobalStyles = createGlobalStyle`
     list-style-type: circle;
     padding-left: 2em;
   }
-  
+
   html {
     font-size: 0.9em;
-    @media screen and (min-width: ${theme.breakpoints.md}) {
+    @media (${theme.mediaQueries.md}) {
       font-size: 1em;
     }
   }

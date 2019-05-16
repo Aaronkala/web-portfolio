@@ -6,6 +6,7 @@
   "keywords": [],
   "main": "src/frontend/index.js",
   "dependencies": {
+    "@styled-system/typography": "^1.0.0-9",
     "history": "*",
     "polished": "^3.0.2",
     "react": "^16.8.3",
@@ -15,7 +16,9 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.5",
     "react-select": "^2.4.2",
-    "styled-components": "^4.1.3"
+    "rebass": "^3.1.0",
+    "styled-components": "^4.1.3",
+    "styled-system": "^4.2.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,12 +26,16 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "styleguide": "npx styleguidist server"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-styleguidist": "^9.0.9"
+  }
 }

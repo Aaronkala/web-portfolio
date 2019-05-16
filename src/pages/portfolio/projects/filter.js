@@ -13,9 +13,9 @@ const customStyles = theme => ({
   option: (provided, state) => ({
     ...provided,
     cursor: 'pointer',
-    color: state.isSelected || state.isFocused ? 'white' : theme.color.primary,
+    color: state.isSelected || state.isFocused ? 'white' : theme.colors.primary,
     backgroundColor:
-      state.isSelected || state.isFocused ? theme.color.primary : 'white',
+      state.isSelected || state.isFocused ? theme.colors.primary : 'white',
   }),
   placeholder: (provided, state) => ({
     ...provided,
@@ -24,7 +24,7 @@ const customStyles = theme => ({
   clearIndicator: (provided, state) => {
     return {
       ...provided,
-      color: theme.color.alert,
+      color: theme.colors.alert,
     };
   },
   indicatorSeparator: (provided, state) => {
@@ -42,11 +42,11 @@ const customStyles = theme => ({
   control: provided => ({
     ...provided,
     maxWidth: 400,
-    backgroundColor: theme.color.primary,
+    backgroundColor: theme.colors.primary,
     borderRadius: 0,
     border: 0,
     color: 'white',
-    boxShadow: `4px 4px 0px 0px ${theme.color.secondary}`,
+    boxShadow: `4px 4px 0px 0px ${theme.colors.secondary}`,
     cursor: 'pointer',
   }),
   input: (provided, state) => ({
