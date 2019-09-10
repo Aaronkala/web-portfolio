@@ -18,7 +18,7 @@ export default class Skills extends React.Component {
         <Heading fontSize={6} mb={3}>
           Aaron Hakala
         </Heading>
-        <Heading fontSize={3}>Software engineer</Heading>
+        <Heading fontSize={3}>Frontend developer</Heading>
         <Hr />
         <P>Hey, I'm a frontend guy interested in everything tech.</P>
         <P>

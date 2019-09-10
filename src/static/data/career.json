@@ -1,12 +1,22 @@
 [
   {
+    "title": "Elevar",
+    "link": "https://getelevar.com",
+    "position": "Frontend Developer",
+    "description": "Building performant web applications for big ecommerce brands with React.JS, GraphQL, Gatsby and Styled Components.",
+    "date": {
+      "start": "15 Aug 2019",
+      "end": "present"
+    }
+  },
+  {
     "title": "Gofore Oyj",
     "link": "https://gofore.com",
     "position": "Software Engineer",
     "description": "Working as a consultant in both big public sector projects and smaller private projects, onspot and with international teams remotely. Built and architected etsin.fairdata.fi application frontend as the only frontend developer and designed an accessible UI. Worked as the first-line service desk engineer for kemira.com solving problems with react, graphql, headless wordpress, azure cloud and added new features based on customer needs. Implemented public site usage reports and data visualizations to avoindata.fi to make it comply with EU regulations and added admin dashboards for approving, editing and deleting organizations and datasets.",
     "date": {
       "start": "1 Jun 2017",
-      "end": "Present"
+      "end": "14 Aug 2019"
     }
   },
   {

@@ -6,6 +6,11 @@
   },
   {
     "type": "Programming",
+    "name": "Typescript",
+    "id": "typescript"
+  },
+  {
+    "type": "Programming",
     "name": "React",
     "id": "react"
   },
@@ -48,6 +53,11 @@
     "type": "Programming",
     "name": "Styled-components",
     "id": "styled-components"
+  },
+  {
+    "type": "Programming",
+    "name": "Python",
+    "id": "python"
   },
   {
     "type": "Design",
