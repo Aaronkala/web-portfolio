@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import theme from './theme';
-import typography from '@styled-system/typography';
+import { createGlobalStyle } from "styled-components";
+import theme from "./theme";
+import typography from "@styled-system/typography";
 
 /* eslint-disable */
 
@@ -76,7 +76,7 @@ const GlobalStyles = createGlobalStyle`
   h1, h2, h3, h4 {
     margin: 0 0 0.5em 0;
     font-weight: inherit;
-    line-height: 1;
+    line-height: 1.5;
   }
   h1 {
     margin: 0 0 0.5em 0;

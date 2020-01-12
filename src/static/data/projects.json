@@ -1,5 +1,87 @@
 [
   {
+    "title": "Elevar - Analytics Automation",
+    "banner": "elevar.jpg",
+    "link": "https://getelevar.com",
+    "description": "Add new features to the Elevar Flagship product that provides automatic analytics insights to big e-commerce brands. Migrate the dashboard to new designs and redesign the project architecture to better scale with new needs.",
+    "role": "Front-end developer",
+    "type": "professional",
+    "skills": [
+      { "id": "typescript", "name": "Typescript" },
+      { "id": "javascript", "name": "JavaScript" },
+      { "id": "react", "name": "React" },
+      { "id": "git", "name": "Git" },
+      { "id": "babel", "name": "Babel" },
+      { "id": "npm", "name": "npm" },
+      { "id": "react-router", "name": "React Router" },
+      { "id": "styled-components", "name": "Styled Components" },
+      { "id": "sass", "name": "Sass" },
+      { "id": "ui-design", "name": "UI Design" },
+      { "id": "webpack", "name": "Webpack" },
+      { "id": "yarn", "name": "yarn" }
+    ],
+    "date": {
+      "start": "01.08.2019",
+      "end": "ongoing"
+    }
+  },
+  {
+    "title": "Stio - Raymer",
+    "banner": "stio.jpg",
+    "link": "https://raymer.stio.com",
+    "description": "Responisble for developing building front end in 4 weeks. Fast static website that can be updated via Prismic and gets product information from shopify.",
+    "role": "Front-end developer",
+    "type": "professional",
+    "skills": [
+      { "id": "babel", "name": "Babel" },
+      { "id": "git", "name": "Git" },
+      { "id": "typescript", "name": "Typescript" },
+      { "id": "javascript", "name": "JavaScript" },
+      { "id": "gatsby", "name": "Gatsby" },
+      { "id": "prismic", "name": "Prismic" },
+      { "id": "npm", "name": "npm" },
+      { "id": "react", "name": "React" },
+      { "id": "react-router", "name": "React Router" },
+      { "id": "sass", "name": "Sass" },
+      { "id": "styled-components", "name": "Styled Components" },
+      { "id": "ui-design", "name": "UI Design" },
+      { "id": "webpack", "name": "Webpack" },
+      { "id": "yarn", "name": "yarn" }
+    ],
+    "date": {
+      "start": "01.10.2019",
+      "end": "01.11.2019"
+    }
+  },
+  {
+    "title": "Strivectin",
+    "banner": "strivectin.jpg",
+    "link": "https://strivectin.com",
+    "description": "Maintain and add features based on customer requests. For instance add support for free gifts that are unlocked based on admin inputted parameters, such as cart total, product sku or product category.",
+    "role": "Front-end developer",
+    "type": "professional",
+    "skills": [
+      { "id": "babel", "name": "Babel" },
+      { "id": "git", "name": "Git" },
+      { "id": "typescript", "name": "Typescript" },
+      { "id": "javascript", "name": "JavaScript" },
+      { "id": "gatsby", "name": "Gatsby" },
+      { "id": "prismic", "name": "Prismic" },
+      { "id": "npm", "name": "npm" },
+      { "id": "react", "name": "React" },
+      { "id": "react-router", "name": "React Router" },
+      { "id": "sass", "name": "Sass" },
+      { "id": "styled-components", "name": "Styled Components" },
+      { "id": "ui-design", "name": "UI Design" },
+      { "id": "webpack", "name": "Webpack" },
+      { "id": "yarn", "name": "yarn" }
+    ],
+    "date": {
+      "start": "25.09.2019",
+      "end": "15.01.2020"
+    }
+  },
+  {
     "title": "Etsin - research dataset finder",
     "banner": "etsin.jpg",
     "link": "https://etsin.fairdata.fi",
