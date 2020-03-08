@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Select from 'react-select';
-import { withRouter } from 'react-router-dom';
-import { withTheme } from 'styled-components';
+import React, { useState } from "react";
+import Select from "react-select";
+import { withRouter } from "react-router-dom";
+import { withTheme } from "styled-components";
 
-import projectData from '../../../static/data/projects.json';
+import projectData from "../../../../static/data/projects.json";
 
 const customStyles = theme => ({
   menu: (provided, state) => ({
@@ -12,14 +12,14 @@ const customStyles = theme => ({
   }),
   option: (provided, state) => ({
     ...provided,
-    cursor: 'pointer',
-    color: state.isSelected || state.isFocused ? 'white' : theme.colors.primary,
+    cursor: "pointer",
+    color: state.isSelected || state.isFocused ? "white" : theme.colors.primary,
     backgroundColor:
-      state.isSelected || state.isFocused ? theme.colors.primary : 'white',
+      state.isSelected || state.isFocused ? theme.colors.primary : "white",
   }),
   placeholder: (provided, state) => ({
     ...provided,
-    color: 'white',
+    color: "white",
   }),
   clearIndicator: (provided, state) => {
     return {
@@ -30,13 +30,13 @@ const customStyles = theme => ({
   indicatorSeparator: (provided, state) => {
     return {
       ...provided,
-      backgroundColor: 'white',
+      backgroundColor: "white",
     };
   },
   dropdownIndicator: (provided, state) => {
     return {
       ...provided,
-      color: 'white',
+      color: "white",
     };
   },
   control: provided => ({
@@ -45,17 +45,17 @@ const customStyles = theme => ({
     backgroundColor: theme.colors.primary,
     borderRadius: 0,
     border: 0,
-    color: 'white',
+    color: "white",
     boxShadow: `4px 4px 0px 0px ${theme.colors.secondary}`,
-    cursor: 'pointer',
+    cursor: "pointer",
   }),
   input: (provided, state) => ({
     ...provided,
-    color: 'white',
+    color: "white",
   }),
   singleValue: (provided, state) => ({
     ...provided,
-    color: 'white',
+    color: "white",
   }),
 });
 
@@ -74,7 +74,7 @@ const GetSkills = () => {
   return s.filter(onlyUnique);
 };
 
-const Filter = ({ filter = '', theme, history }) => {
+const Filter = ({ filter = "", theme, history }) => {
   const [skills] = useState(GetSkills());
 
   const activeFilter = skills.find(value => value.id === filter);
@@ -94,11 +94,11 @@ const Filter = ({ filter = '', theme, history }) => {
       }
       isClearable="True"
       onChange={(item, action) => {
-        if (action.action === 'select-option') {
+        if (action.action === "select-option") {
           reRoute(item.value);
         }
-        if (action.action === 'clear') {
-          reRoute('');
+        if (action.action === "clear") {
+          reRoute("");
         }
       }}
       options={skills.map(skill => ({

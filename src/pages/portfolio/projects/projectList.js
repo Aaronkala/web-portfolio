@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import projectData from '../../../static/data/projects.json';
-import ProjectListItem from './projectListItem';
+import ProjectListItem from "./projectListItem";
+import projectData from "../../../../static/data/projects.json";
 
 const ProjectList = ({ filter }) => {
   const filterProjects = (data, fil) => {

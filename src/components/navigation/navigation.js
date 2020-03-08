@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { display } from 'styled-system';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "gatsby";
+import { display } from "styled-system";
 
 // The navigation items that will be in all navs
 // TODO:  Nav items should come from somewhere else

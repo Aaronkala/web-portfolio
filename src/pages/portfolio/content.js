@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import Contact from '../../components/contact/contact';
-import Hr from '../../components/hr/hr';
-import Projects from './projects/index.js';
+import Contact from "../../components/contact/contact";
+import Hr from "../../components/hr/hr";
+import Projects from "./projects/";
 
 const Content = ({ filter }) => {
   return (

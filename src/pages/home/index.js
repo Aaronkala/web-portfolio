@@ -1,15 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Box, Image } from 'rebass';
-import { position, display } from 'styled-system';
+import React from "react";
+import styled from "styled-components";
+import { Box, Image } from "rebass";
+import { position, display } from "styled-system";
 
-import SplitLayout from '../../components/splitLayout/splitLayout';
-import Container from '../../components/container/container';
-import Content from './content';
-import analytics from '../../utils/analytics';
-import Head from '../../components/head/head';
-import Nav from '../../components/navigation/navigation';
-import me from '../../static/aaron.jpg';
+import Content from "./content";
+import SplitLayout from "../../components/splitLayout/splitLayout";
+import Container from "../../components/container/container";
+import Head from "../../components/head/head";
+import Nav from "../../components/navigation/navigation";
+import me from "../../../static/aaron.jpg";
+import analytics from "../../utils/analytics";
 
 const PositionBox = styled(Box)`
   ${position};
@@ -22,30 +22,30 @@ const CustomImage = styled(Image)`
   object-fit: cover;
 `;
 
-export default class Home extends React.Component {
-  componentDidMount() {
-    analytics({ event: 'spa-pageview' });
-  }
-  render() {
-    return (
-      <Box mt={{ xs: 3, md: 7 }} mb={7}>
-        <Head title="Hakala - Home" name="About me" />
-        <Nav type="centered" display={{ xs: 'initial', md: 'none' }} />
-        <Container>
-          <SplitLayout
-            left={
-              <PositionBox position={{ xs: 'initial', md: 'fixed' }}>
-                <Nav type="hovering" display={{ xs: 'none', md: 'flex' }} />
-                {/* TODO: fix profile image width and height */}
-                <PositionBox display="flex">
-                  <CustomImage src={me} mx="auto" mt={{ xs: 4, md: 0 }} />
-                </PositionBox>
+const Home = () => {
+  React.useEffect(() => {
+    analytics({ event: "spa-pageview" });
+  }, []);
+
+  return (
+    <Box mt={{ xs: 3, md: 7 }} mb={7}>
+      <Head title="Hakala - Home" name="About me" />
+      {/* <Nav type="centered" display={{ xs: 'initial', md: 'none' }} /> */}
+      <Container>
+        <SplitLayout
+          left={
+            <PositionBox position={{ xs: "initial", md: "fixed" }}>
+              {/* <Nav type="hovering" display={{ xs: "none", md: "flex" }} /> */}
+              <PositionBox display="flex">
+                <CustomImage src={me} mx="auto" mt={{ xs: 4, md: 0 }} />
               </PositionBox>
-            }
-            right={<Content />}
-          />
-        </Container>
-      </Box>
-    );
-  }
-}
+            </PositionBox>
+          }
+          right={<Content />}
+        />
+      </Container>
+    </Box>
+  );
+};
+
+export default Home;

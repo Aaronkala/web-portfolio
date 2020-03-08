@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Heading, Text, Box } from "rebass";
+
 import Hr from "../../components/hr/hr";
 
 const P = styled(Text)``;
